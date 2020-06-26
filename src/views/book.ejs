@@ -7,7 +7,8 @@
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -94,15 +95,16 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=book.img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/images/<%=book.image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=book.title%></h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=book.author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted"><%=book.genre%> </small>
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%=book.genre%> <a class="btn btn-primary btn-xs" href="edit/<%=book._id%>"><i class="fa fa-edit"></i></a>  <a class="btn btn-danger btn-xs" href="delete/<%=book._id%>"><i class="fa fa-trash"></i></a></small>
                   </h4></div>
+                  
                 <div class="col-xs-3"></div>
               </div>
               <br><br>

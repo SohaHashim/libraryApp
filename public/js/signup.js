@@ -21,40 +21,52 @@ function checkInputs(){
     if(usernameValue === ""){
         alert("Username cannot be blank");
         check= false;
+        return false;
     } else{
+       // return true;
         check = true;
         
     }
     if(emailValue === ""){
         alert("Email cannot be blank");
         check= false;
+        return false;
     } else if(!isEmail(emailValue)){
         alert("Email is not valid");
         check= false;
-    } else {  
+        return false;
         
+    } else {  
+        //return true;
         check= true;
     }
 
     if(passwordValue === ""){
         check= false;
         alert("Password cannot be blank");
+        return false;
+
     } else if(passwordValue.length < 8){
         alert("Password should contain minimum 8 characters");
         check= false;
+        return false;
+
     } else {    
-    
+        //return true;
         check= true;
     }
     if(password2Value === ""){
         alert("Confirm Password cannot be blank");
         check = false;
+        return false;
     } else if(password2Value.length < 8){
         alert("Password should contain minimum 8 characters");
         check = false;
+        return false;
     } else if(passwordValue !== password2Value) {
         alert( "Passwords doesn't match");
         check = false;
+        return false;
     } else {    
         
         check = true;
@@ -62,9 +74,13 @@ function checkInputs(){
     if(phonenoValue === ""){
         alert("Phone number cannot be blank");
         check = false;
+        return false;
+
     } else if(!isPhoneNo(phonenoValue)) {
         alert("Phone number is not valid");
         check = false;
+        return false;
+
     } else { 
          
          check = true;    
